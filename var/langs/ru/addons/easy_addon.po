@@ -18,5 +18,24 @@ msgstr "Простой модуль"
 
 msgctxt "Addons::description::easy_addon"
 msgid "Description (easy_addon)"
-msgstr "Описание простого модуля."
+msgstr "Описание простого модуля"
 
+msgctxt "Languages::additional_packaging"
+msgid "Requires additional packaging"
+msgstr "Требует дополнительной упаковки"
+
+msgctxt "Languages::territory_pass"
+msgid "A pass to territory is required"
+msgstr "Требуется пропуск на территорию"
+
+msgctxt "Languages::lifting"
+msgid "Lifting"
+msgstr "Подъём груза"
+
+msgctxt "Languages::required_lifting"
+msgid "Required lifting"
+msgstr "Требуется подъём"
+
+msgctxt "Languages::independent_lifting"
+msgid "Independent lifting"
+msgstr "Самостоятельный подъём"

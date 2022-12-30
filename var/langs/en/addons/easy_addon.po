@@ -10,4 +10,24 @@ msgstr "Easy Addon"
 
 msgctxt "Addons::description::easy_addon"
 msgid "Description (easy_addon)"
-msgstr "Description."
+msgstr "Description"
+
+msgctxt "Languages::additional_packaging"
+msgid "Requires additional packaging"
+msgstr "Requires additional packaging"
+
+msgctxt "Languages::territory_pass"
+msgid "A pass to territory is required"
+msgstr "A pass to territory is required"
+
+msgctxt "Languages::lifting"
+msgid "Lifting"
+msgstr "Lifting cargo"
+
+msgctxt "Languages::required_lifting"
+msgid "Required lifting"
+msgstr "Required lifting"
+
+msgctxt "Languages::independent_lifting"
+msgid "Independent lifting"
+msgstr "Independent lifting"

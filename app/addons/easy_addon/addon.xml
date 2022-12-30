@@ -4,6 +4,53 @@
     <version>1.0</version>
     <priority>4294967294</priority>
     <position>0</position>
+    <status>active</status>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
     <default_language>en</default_language>
+
+    <queries>
+        <item for="install">
+            ALTER TABLE ?:products
+                ADD `fragile` varchar(1),
+                ADD `additional_packaging` varchar(1),
+                ADD `territory_pass` varchar(1),
+                ADD `lifting` varchar(1);
+            UPDATE ?:products SET fragile='N';
+            UPDATE ?:products SET additional_packaging='N';
+            UPDATE ?:products SET territory_pass='N';
+            UPDATE ?:products SET lifting='A';
+            ALTER TABLE ?:products MODIFY fragile VARCHAR(1) NOT NULL DEFAULT 'N';
+            ALTER TABLE ?:products MODIFY additional_packaging VARCHAR(1) NOT NULL DEFAULT 'N';
+            ALTER TABLE ?:products MODIFY territory_pass VARCHAR(1) NOT NULL DEFAULT 'N';
+            ALTER TABLE ?:products MODIFY lifting VARCHAR(1) NOT NULL DEFAULT 'A';
+        </item>
+        <item for="uninstall">
+            ALTER TABLE ?:products
+                DROP `fragile`,
+                DROP `additional_packaging`,
+                DROP `territory_pass`,
+                DROP `lifting`;
+        </item>
+    </queries>
 </addon>
+
+<!--ALTER TABLE cscart_products-->
+<!--    ADD `fragile` varchar(1),-->
+<!--    ADD `additional_packaging` varchar(1),-->
+<!--    ADD `territory_pass` varchar(1),-->
+<!--    ADD `lifting` varchar(1);-->
+<!--UPDATE cscart_products SET fragile='N';-->
+<!--UPDATE cscart_products SET additional_packaging='N';-->
+<!--UPDATE cscart_products SET territory_pass='N';-->
+<!--UPDATE cscart_products SET lifting='A';-->
+<!--ALTER TABLE cscart_products MODIFY fragile VARCHAR(1) NOT NULL DEFAULT 'N';-->
+<!--ALTER TABLE cscart_products MODIFY additional_packaging VARCHAR(1) NOT NULL DEFAULT 'N';-->
+<!--ALTER TABLE cscart_products MODIFY territory_pass VARCHAR(1) NOT NULL DEFAULT 'N';-->
+<!--ALTER TABLE cscart_products MODIFY lifting VARCHAR(1) NOT NULL DEFAULT 'A';-->
+
+
+<!--ALTER TABLE cscart_products-->
+<!--    DROP `fragile`,-->
+<!--    DROP `additional_packaging`,-->
+<!--    DROP `territory_pass`,-->
+<!--    DROP `lifting`;-->
