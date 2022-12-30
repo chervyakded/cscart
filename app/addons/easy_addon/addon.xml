@@ -15,14 +15,30 @@
                 ADD `additional_packaging` varchar(1),
                 ADD `territory_pass` varchar(1),
                 ADD `lifting` varchar(1);
-            UPDATE ?:products SET fragile='N';
-            UPDATE ?:products SET additional_packaging='N';
-            UPDATE ?:products SET territory_pass='N';
-            UPDATE ?:products SET lifting='A';
-            ALTER TABLE ?:products MODIFY fragile VARCHAR(1) NOT NULL DEFAULT 'N';
-            ALTER TABLE ?:products MODIFY additional_packaging VARCHAR(1) NOT NULL DEFAULT 'N';
-            ALTER TABLE ?:products MODIFY territory_pass VARCHAR(1) NOT NULL DEFAULT 'N';
-            ALTER TABLE ?:products MODIFY lifting VARCHAR(1) NOT NULL DEFAULT 'A';
+        </item>
+        <item for="install">
+            UPDATE `?:products` SET fragile='N';
+        </item>
+        <item for="install">
+            UPDATE `?:products` SET additional_packaging='N';
+        </item>
+        <item for="install">
+            UPDATE `?:products` SET territory_pass='N';
+        </item>
+        <item for="install">
+            UPDATE `?:products` SET lifting='A';
+        </item>
+        <item for="install">
+            ALTER TABLE `?:products` MODIFY fragile VARCHAR(1) NOT NULL DEFAULT 'N';
+        </item>
+        <item for="install">
+            ALTER TABLE `?:products` MODIFY additional_packaging VARCHAR(1) NOT NULL DEFAULT 'N';
+        </item>
+        <item for="install">
+            ALTER TABLE `?:products` MODIFY territory_pass VARCHAR(1) NOT NULL DEFAULT 'N';
+        </item>
+        <item for="install">
+            ALTER TABLE `?:products` MODIFY lifting VARCHAR(1) NOT NULL DEFAULT 'A';
         </item>
         <item for="uninstall">
             ALTER TABLE ?:products
